@@ -1,6 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { SearchBarInput } from "../components/searchBar/searchBarInput"
-import { SearchResaults } from "../components/searchBar/searchResults";
+import { SearchBarInput } from "../Components/SearchBar/SearchBarInput"
 
 const locators = {
     header: '//div[@id="site-header"]',
@@ -12,17 +11,15 @@ const locators = {
     language: "שפה"
 }
 
-export class topBar {
+export class TopBar {
     private page: Page;
     private account: Locator;
     private shoppingCart: Locator;
     public  searchBar: SearchBarInput;
-    public searchResaults: SearchResaults;
 
     constructor(page: Page) {
         this.page = page;;
         this.searchBar = new SearchBarInput(page);
-        this.searchResaults = new SearchResaults(page);
 
         this.account = this.page.getByText(locators.account);
         this.shoppingCart = this.page.getByText(locators.shoppingCart);

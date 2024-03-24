@@ -1,19 +1,19 @@
 import { Locator, Page } from "@playwright/test";
-import { basePage } from "../pages/basePage";
+import { BasePage } from "../Pages/BasePage";
 
 const locators = {
     addedToCartConfirmation: "המוצר התווסף בהצלחה לעגלת הקניות"
 }
 
-export class ConfirmationWindow extends basePage {
-    private addedToCartConfirmation: Locator;
+export class ConfirmationWindow extends BasePage {
+    private addToSaleCartButton: Locator;
 
     constructor(page: Page) {
         super(page);
-        this.addedToCartConfirmation = page.getByText(locators.addedToCartConfirmation);
+        this.addToSaleCartButton = page.getByText(locators.addedToCartConfirmation);
     }
 
-    public async isAddedToCart() {
-        return this.addedToCartConfirmation.isVisible();
+    public async isProductInSalesCart() {
+        return this.addToSaleCartButton.isVisible();
     }
 }

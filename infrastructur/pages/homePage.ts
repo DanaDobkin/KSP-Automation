@@ -1,11 +1,11 @@
 import { Locator, Page } from "@playwright/test";
-import { basePage } from "./basePage";
+import { BasePage } from "./BasePage";
 
 const locators = {
     categories: '//img[contains(@id, categoryimage)]',
 }
 
-export class HomePage extends basePage {
+export class HomePage extends BasePage {
     private categories: Locator;
 
     constructor(page: Page) {
