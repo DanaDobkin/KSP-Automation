@@ -63,6 +63,7 @@ I know I havn't fulfilled all the assignments requirements. Despite the busy tim
 - generic. for a project with lots of tests, utills functions and wide component-coverage for re-using in tests or scripts are a must. (in my implementation, each page/layout/component class initializes a "page" object. I know I should have did a generic elementUser class [for example] that would store the page object, and all other classes would inherit/use it whenever needed.)
 - locators. find better expressions. maybe discuss with the developers about changing the DOM.
 - in the future if we would need to connect this project to a running CI/CD platform, there will be lots of configurations: dockerfile, testing environments and db per one, mocks (for users for example), nodes/agents for running them and more.
+- add and extend BaseTest options (in a project with many tests, it is important to have a BaseTest class with different pages, operations and viraibles for all other test-classes to inherit from)
 
 
 To sum up everything that has been saied above, due to time constraints in the army, I did not have time to fulfill all the requirements of the mission, but nevertheless I am satisfied with what I have achieved so far. 
