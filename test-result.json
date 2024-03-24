@@ -47,7 +47,7 @@
         "testDir": "C:/Users/אפרת/Documents/repos/KSP-Automation",
         "testIgnore": [],
         "testMatch": [
-          "canvas.test.ts"
+          "ShoppingProductsValidation.test.ts"
         ],
         "timeout": 30000
       },
@@ -60,7 +60,7 @@
         "testDir": "C:/Users/אפרת/Documents/repos/KSP-Automation",
         "testIgnore": [],
         "testMatch": [
-          "canvas.test.ts"
+          "ShoppingProductsValidation.test.ts"
         ],
         "timeout": 30000
       }
@@ -73,74 +73,192 @@
   },
   "suites": [
     {
-      "title": "test-runner\\preservedAuthenticatedState\\canvas.test.ts",
-      "file": "test-runner/preservedAuthenticatedState/canvas.test.ts",
+      "title": "tests\\shoppingProductsValidation.test.ts",
+      "file": "tests/shoppingProductsValidation.test.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "ksp login",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "adding products to cart",
+          "file": "tests/shoppingProductsValidation.test.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "add item to shopping cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 9231,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-03-24T11:55:06.391Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 26410,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-03-24T22:28:52.107Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 24716,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-03-24T22:28:52.107Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 11509,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-03-24T11:55:06.402Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "id": "4ee605cd36a8a638e2e6-372dc720e2df055d53f2",
+              "file": "tests/shoppingProductsValidation.test.ts",
+              "line": 20,
+              "column": 9
             }
-          ],
-          "id": "7c06763bbf589469f7e6-80fe901b81b9dd22df10",
-          "file": "test-runner/preservedAuthenticatedState/canvas.test.ts",
-          "line": 3,
-          "column": 5
+          ]
+        },
+        {
+          "title": "validate cart capacity",
+          "file": "tests/shoppingProductsValidation.test.ts",
+          "line": 32,
+          "column": 6,
+          "specs": [
+            {
+              "title": "validate the product was added to user cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 2,
+                      "error": {
+                        "message": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"",
+                        "stack": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"\n    at C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts:36:25",
+                        "location": {
+                          "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                          "column": 25,
+                          "line": 36
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m             storageState\u001b[33m:\u001b[39m \u001b[32m\"./constants/auth.json\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m             viewport\u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m         })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                            "column": 25,
+                            "line": 36
+                          },
+                          "message": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"\n\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m             storageState\u001b[33m:\u001b[39m \u001b[32m\"./constants/auth.json\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m             viewport\u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m         })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts:36:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-03-24T22:29:19.376Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                        "column": 25,
+                        "line": 36
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                },
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"",
+                        "stack": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"\n    at C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts:36:25",
+                        "location": {
+                          "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                          "column": 25,
+                          "line": 36
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m             storageState\u001b[33m:\u001b[39m \u001b[32m\"./constants/auth.json\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m             viewport\u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m         })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                            "column": 25,
+                            "line": 36
+                          },
+                          "message": "Error: browser.newContext: \"deviceScaleFactor\" option is not supported with null \"viewport\"\n\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m             storageState\u001b[33m:\u001b[39m \u001b[32m\"./constants/auth.json\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m             viewport\u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m         })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts:36:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-03-24T22:29:17.958Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\אפרת\\Documents\\repos\\KSP-Automation\\tests\\shoppingProductsValidation.test.ts",
+                        "column": 25,
+                        "line": 36
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4ee605cd36a8a638e2e6-d513b626a47ee31d9a72",
+              "file": "tests/shoppingProductsValidation.test.ts",
+              "line": 49,
+              "column": 9
+            }
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-24T11:55:05.728Z",
-    "duration": 15027.467,
+    "startTime": "2024-03-24T22:28:51.131Z",
+    "duration": 28463.813,
     "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }
