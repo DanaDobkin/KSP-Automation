@@ -18,6 +18,6 @@ export class HomePage extends BasePage {
     }
 
     public async searchForProduct(productName: string) {
-        await this.topBar.searchBar.searcForProduct(productName);
+        await this.topBar.searchBar.searchForProduct(productName);
     }
 }

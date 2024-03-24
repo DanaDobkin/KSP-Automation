@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
             args: ["--start-maximized"]
         }
     },
-    testMatch: ["shoppingProductsValidation.test.ts"],
+    testMatch: ["ShoppingProductsValidation.test.ts"],
     retries: 0,
     reporter: [
         ["dot"], 
