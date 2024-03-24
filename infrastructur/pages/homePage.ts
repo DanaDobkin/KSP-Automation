@@ -1,6 +1,6 @@
 import { Locator, Page } from "@playwright/test";
-import { BasePage } from "./BasePage";
-import { ProductsCatalog } from "../Layouts/ProductsCatalog";
+import { BasePage } from "./basePage";
+import { ProductsCatalog } from "../layouts/productsCatalog";
 
 const locators = {
     categories: '//img[contains(@id, categoryimage)]',

@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { BasePage } from "../Pages/BasePage";
+import { BasePage } from "../pages/basePage";
 
 const locators = {
     addedToCartConfirmation: "המוצר התווסף בהצלחה לעגלת הקניות"

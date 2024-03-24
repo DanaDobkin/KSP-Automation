@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { SearchBarInput } from "../Components/SearchBar/SearchBarInput"
+import { SearchBarInput } from "../components/searchBar/searchBarInput"
 
 const locators = {
     header: '//div[@id="site-header"]',

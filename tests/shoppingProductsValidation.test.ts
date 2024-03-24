@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { HomePage } from "../infrastructur/Pages/HomePage";
-import { ConfirmationWindow } from "../infrastructur/Layouts/ConfirmationWindow";
-import { ShoppingCartPage } from "../infrastructur/Pages/ShoppingCartPage";
-import { ProductMenu } from "../infrastructur/Layouts/productMenu";
+import { HomePage } from "../infrastructur/pages/homePage";
+import { ConfirmationWindow } from "../infrastructur/layouts/confirmationWindow";
+import { ShoppingCartPage } from "../infrastructur/pages/shoppingCartPage";
+import { ProductMenu } from "../infrastructur/layouts/productMenu";
 
 test.describe("adding products to cart", () => {
     let homePage: HomePage;
