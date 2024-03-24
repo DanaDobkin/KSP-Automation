@@ -34,7 +34,8 @@ test.describe("validate cart capacity", () => {
 
     test.beforeAll(async ({ browser}) => {
         const context = await browser.newContext({
-            storageState: "./constants/auth.json"
+            storageState: "./constants/auth.json",
+            viewport: null
         });
     
         const page = await context.newPage();
