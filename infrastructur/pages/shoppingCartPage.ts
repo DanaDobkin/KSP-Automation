@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { basePage } from "./basePage";
+import { BasePage } from "./BasePage";
 
 const locators = {
     objectsAmount: '//span[@class="text"]/span',
@@ -10,7 +10,7 @@ const labels = {
     zeroObjects: "יש לך 0 פריטים"
 }
 
-export class ShoppingCartPage extends basePage {
+export class ShoppingCartPage extends BasePage {
     private objectsAmount: Locator;
 
     constructor(page: Page) {

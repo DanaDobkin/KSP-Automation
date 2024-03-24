@@ -1,16 +1,12 @@
 import { Page } from "@playwright/test";
-import { topBar } from "../layouts/topBar";
+import { TopBar } from "../Layouts/TopBar";
 
-export abstract class basePage {
+export abstract class BasePage {
     protected readonly page: Page;
-    protected readonly topBar: topBar;
+    protected readonly topBar: TopBar;
 
     constructor(page: Page) {
         this.page = page;
-        this.topBar = new topBar(page);
-    }
-
-    async wait(time: number) {
-        await this.page.waitForTimeout(time)
+        this.topBar = new TopBar(page);
     }
 }

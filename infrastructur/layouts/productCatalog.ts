@@ -1,12 +1,12 @@
 import { Locator, Page } from "@playwright/test";
-import { basePage } from "../pages/basePage";
+import { BasePage } from "../Pages/BasePage";
 
 const locators = {
     items: "//div[contains(@class, 'jss')]/a[contains(@href, 'item')]",
     addToCartBts: "הוספה לעגלה"
 }
 
-export class ProductCatalog extends basePage {
+export class ProductCatalog extends BasePage {
     private items: Locator;
     private addToCartBts: Locator;
 

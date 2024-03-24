@@ -14,9 +14,9 @@ export class SearchBarInput {
         this.searchBar = page.locator(locators.searchBar);
     }
 
-    public async searcForProduct(searchText: string) {
+    public async searchForProduct(textInput: string) {
         await this.searchBar.click();
-        await this.searchBar.fill(searchText);
+        await this.searchBar.fill(textInput);
         await this.searchBar.press("Enter");
     }
 }
