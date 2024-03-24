@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import { TopBar } from "../Layouts/TopBar";
+import { TopBar } from "../Layouts/topBar";
 
 export abstract class BasePage {
     protected readonly page: Page;

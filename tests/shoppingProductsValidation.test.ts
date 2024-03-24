@@ -1,26 +1,26 @@
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../infrastructur/Pages/HomePage";
-import { ProductCatalog } from "../infrastructur/Layouts/ProductCatalog";
 import { ConfirmationWindow } from "../infrastructur/Layouts/ConfirmationWindow";
 import { ShoppingCartPage } from "../infrastructur/Pages/ShoppingCartPage";
+import { ProductMenu } from "../infrastructur/Layouts/productMenu";
 
 test.describe("adding products to cart", () => {
     let homePage: HomePage;
-    let item: ProductCatalog;
+    let productMenu: ProductMenu;
     let addedToSaleCartConfirmation: ConfirmationWindow;
 
     test.beforeEach(async ({ page }) => {
         await page.goto("https://ksp.co.il/web/");
 
         homePage = new HomePage(page);
-        item = new ProductCatalog(page);
+        productMenu = new ProductMenu(page);
         addedToSaleCartConfirmation = new ConfirmationWindow(page);
     });
 
     test('add item to shopping cart', async ({ page }) => {
         await homePage.searchForProduct("samsung");
-        await item.getFirstItem();
-        await item.addItemToCart();
+        await homePage.getFirstItem();
+        await productMenu.addItemToCart();
         expect(await addedToSaleCartConfirmation.isProductInSalesCart()).toBeTruthy();
     });
 
@@ -53,5 +53,3 @@ test.describe("validate cart capacity", () => {
         await page.close();
     }) 
 });
-
-//   await page.locator('button').filter({ hasText: 'הוספה לעגלה' }).click();
