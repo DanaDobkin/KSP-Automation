@@ -6,15 +6,13 @@ const config: PlaywrightTestConfig = {
             name: "chromium",
             use: { ...devices['Desktop Chrome'] },
         },
-        // {
-        //     name: "firefox",
-        //     use: { ...devices['Desktop Firefox'] },
-        // }
+        {
+            name: "firefox",
+            use: { ...devices['Desktop Firefox'] },
+        }
     ],
     use: {
         headless: false,
-        //channel: "chrome",
-        //baseURL: "https://ksp.co.il/web/",
         screenshot: "only-on-failure",
         video: "retain-on-failure",
         launchOptions: {
