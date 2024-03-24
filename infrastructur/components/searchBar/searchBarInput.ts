@@ -1,8 +1,7 @@
 import { test, Locator, Page, expect } from "@playwright/test";
 
 const locators = {
-    //searchBar: "//input[@id='searchTextBox']",
-    searchBar: "#searchTextBox"
+    searchBar: "//input[@id='searchTextBox']"
 }
 
 export class SearchBarInput {
