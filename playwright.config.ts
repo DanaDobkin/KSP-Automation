@@ -6,10 +6,10 @@ const config: PlaywrightTestConfig = {
             name: "chromium",
             use: { ...devices['Desktop Chrome'] },
         },
-        {
-            name: "firefox",
-            use: { ...devices['Desktop Firefox'] },
-        }
+        // {
+        //     name: "firefox",
+        //     use: { ...devices['Desktop Firefox'] },
+        // }
     ],
     use: {
         headless: false,
@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
             args: ["--start-maximized"]
         }
     },
-    testMatch: ["canvas.test.ts"],
+    testMatch: ["addProductToShoppingCart.test.ts"],
     retries: 0,
     reporter: [
         ["dot"], 
