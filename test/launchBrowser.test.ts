@@ -1,14 +1,7 @@
-import { chromium } from "playwright";
+import { test, expect } from "@playwright/test";
 
-describe('Launch Browser', () => {
-
-    test('open Letcode', async () => {
-        const browser = await chromium.launch({
-            headless: false
-        });
-        const context = await browser.newContext();
-        const page = await context.newPage();
-        await page.goto('https://Letcode.in/');
-        await browser.close();
-    });
+test('open Letcode and verify title', async ({ page }) => {
+    await page.goto('https://Letcode.in/');
+    const title =  await page.title();
+    expect(title).toBe("LetCode with Koushik");   
 });
